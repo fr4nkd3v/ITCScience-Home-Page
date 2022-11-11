@@ -1,0 +1,54 @@
+// Variables y reglas CSS personalizadas de la web
+// Las reglas css serán las que mas se reutilicen
+
+// Fonts
+
+@font-face {
+  font-family: 'Jakarta';
+  src: url('/assets/fonts/PlusJakartaSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Jakarta';
+  src: url('/assets/fonts/PlusJakartaSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Jakarta';
+  src: url('/assets/fonts/PlusJakartaSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Jakarta';
+  src: url('/assets/fonts/PlusJakartaSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Jakarta';
+  src: url('/assets/fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+// Variables
+
+$primary-color: #181818;
+$secondary-color: #fff;
+
+// Animations
+
+@keyframes rotate0 {
+  0% {transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes rotate180 {
+  0% {transform: rotate(180deg); }
+  25% {transform: rotate(270deg); }
+  50% {transform: rotate(360deg); }
+  75% {transform: rotate(90deg); }
+  100% { transform: rotate(180deg); }
+}

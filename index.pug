@@ -1,0 +1,216 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/style.css")
+    title ITCScience
+
+  body
+
+    header
+
+      .brand
+        img.logo(src="assets/svg/brand-logo.svg", alt="Logo de la Marca")
+        img.name(src="assets/svg/brand-text.svg", alt="Texto de la Marca")
+      
+      nav: ul
+          li: a.active(href="") INICIO
+          li: a(href="") BLOG
+          li: a(href="") COMUNIDAD
+      
+      .session-options
+        a(href="#") Iniciar Sesión
+        a(href="#") Regístrate
+  
+    main
+
+      section.initial: .wrapper
+
+          .header
+            img(src="/assets/images/hand.png", alt="")
+            | #[span Bienvenido ] a nuestra Comunidad!
+          
+          .wrapper-quote
+            .back-quote
+            .quote
+              p
+                | "El mayor #[span Enemigo] del conocimiento no es #[br]
+                | la ingnorancia, sino la #[span Ilusión] #[br]
+                | del conocimiento"
+              .autor - Stephen Hawking
+          
+          .row
+            a.btn.btn-light(href="#")
+              img(src="/assets/svg/people-community-28-filled.svg", alt="icono comunidad")
+              span Unirme a la Comu
+            a.btn.btn-dark(href="#")
+              span Conocer más
+              img(src="/assets/svg/arrow-down-circle.svg", alt="icono flecha abajo")
+              
+          .back
+            img.logo(src="./assets/images/logo-design.png", alt="diseño del logo")
+      
+      section.our: .wrapper
+
+          .header
+            .subtitle Nosotros
+            .title Qué es #[span ITCScience] ?
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, enim? Labore mollitia natus modi, explicabo architecto molestias aperiam sapiente similique numquam.
+          
+          .content
+            img(src="/assets/svg/top-design-ourSection.svg", alt="diseño posterior")
+            .paragraphs
+              p Desde ITCScience #[span divulgamos y compartimos la ciencia] desde un enfoque cultural, con el fin de introducir a más individuos a un mundo de conocimientos.
+              p Formamos esta organización con la #[span visión de difundir, compartir y participar], junto a ésta comunidad, a formar parte de multiples iniciativas y proyectos.
+            img(src="/assets/svg/bottom-design-ourSection.svg", alt="diseño inferior")
+      
+      section.groups: .wrapper
+
+        .header
+          .subtitle Comunidad
+          .title Nuestros #[span Grupos]
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus eos eius expedita nulla possimus numquam incidunt enim.
+
+        .content
+          article.group
+            h1 Ciencias #[img(src="/assets/images/brain.png", alt="icono cerebro")] #[br]Computacionales
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec, orci hac amet, pretium.
+            a.btn.btn-light(href="#")
+              span INGRESAR AL GRUPO
+              img(src="/assets/svg/enter-outline.svg", alt="icono entrar")
+            img(src="/assets/images/cs-group.jpg", alt="imagen grupo ciencias")
+            .circle
+            .back
+          article.group
+            h1 #[img(src="/assets/images/alien.png", alt="icono alien")] #[br] Programadores #[img(src="/assets/images/pc.png", alt="icono PC")]
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec, orci hac amet, pretium.
+            a.btn.btn-light(href="#")
+              span INGRESAR AL GRUPO
+              img(src="/assets/svg/enter-outline.svg", alt="icono entrar")
+            img(src="/assets/images/developers_group.jpg", alt="imagen grupo developers")
+            .circle
+            .back
+          article.group
+            h1 #[img(src="/assets/images/books.png", alt="icono libros")] Recursos#[br]Informáticos #[img(src="/assets/images/smart.png", alt="icono inteligente")]
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec, orci hac amet, pretium.
+            a.btn.btn-light(href="#")
+              span INGRESAR AL GRUPO
+              img(src="/assets/svg/enter-outline.svg", alt="icono entrar")
+            img(src="/assets/images/resources_group.jpg", alt="imagen grupo recursos")
+            .circle
+            .back
+          article.group
+            h1 #[img(src="/assets/images/penguin.png", alt="icono pinguino")] IT &#[br]SysAdmin #[img(src="/assets/images/pc.png", alt="icono PC")]
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec, orci hac amet, pretium.
+            a.btn.btn-light(href="#")
+              span INGRESAR AL GRUPO
+              img(src="/assets/svg/enter-outline.svg", alt="icono entrar")
+            img(src="/assets/images/sysadmin_group.jpg", alt="imagen grupo sysadmin")
+            .circle
+            .back
+      
+      section.community: .wrapper
+
+        .header
+          .subtitle Comunidad
+          .title Nuestra #[span Comunidad]
+        
+        p
+          | Conformada en su mayoría por miembros de toda Latam, formamos una gran comunidad que #[span aporta] y #[span aprende] cada día, y que fomenta el aprendizaje y la educación en torno a las #[span ciencias de la computación y la informática].
+        
+        .stats
+          .stat
+            span +800
+            span Miembros
+          .stat
+            span +100
+            span Recursos
+          .stat
+            span +6
+            span Grupos
+          .stat
+            span 1
+            span Objetivo
+        
+        img(src="./assets/images/world-design.png", alt="imagen miembros")
+      
+      section.blog: .wrapper
+
+        .header
+          .subtitle Blog & Newsletter
+          .title Compartiendo #[span Conocimiento]
+          p En nuestro Blog compartimos diversos artículos, tanto para iniciantes como para experimentados, aquí brindamos un espacio de difusión para toda la comunidad.
+          .row
+            a.btn.btn-light(href="#")
+              img(src="/assets/svg/article.svg", alt="icono de artículo")
+              span Visitar el Blog
+            a.btn.btn-dark(href="#")
+              img(src="/assets/svg/mail-newsletter.svg", alt="icono de newsletter")
+              span Recibir Newsletter
+        
+        .content
+
+          article.post
+            img(src="/assets/images/software_post.webp", alt="imagen software")
+            .content
+              .top #[span.by por Mario Cáceres] #[span.date Ayer]
+              .title Lorem Ipsum dolor sit amet
+              .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
+          
+          article.post
+            img(src="/assets/images/google_post.webp", alt="imagen software")
+            .content
+              .top #[span.by por Daniel Sepenser] #[span.date Hace 5 días]
+              .title Lorem Ipsum dolor sit amet
+              .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
+          
+          article.post
+            img(src="/assets/images/security_post.webp", alt="imagen software")
+            .content
+              .top #[span.by por Brandon Milton] #[span.date 15/10/2022]
+              .title Lorem Ipsum dolor sit amet
+              .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
+          
+          article.post
+            img(src="/assets/images/linux_post.webp", alt="imagen software")
+            .content
+              .top #[span.by por Mario Cáceres] #[span.date Ayer]
+              .title Lorem Ipsum dolor sit amet
+              .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
+          
+          article.post
+            img(src="/assets/images/processor_post.webp", alt="imagen software")
+            .content
+              .top #[span.by por Daniel Sepenser] #[span.date Hace 5 días]
+              .title Lorem Ipsum dolor sit amet
+              .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
+          
+          article.post
+            img(src="/assets/images/rust_post.webp", alt="imagen software")
+            .content
+              .top #[span.by por Brandon Milton] #[span.date 15/10/2022]
+              .title Lorem Ipsum dolor sit amet
+              .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
+        
+    footer: .wrapper
+
+      .brand
+        img.logo(src="/assets/svg/brand-logo.svg", alt="Logo de la marca")
+        img.name(src="./assets/svg/brand-text.svg", alt="Texto de la marca")
+      
+      .links
+        a(href="#") Blog
+        a(href="#") Comunidad
+        a(href="#") Contacto
+        a(href="#") Privacidad
+
+      span.copyright Copyright © 2022 ITCScience All rights reserved.
+      
+      .by Designed and Developed by #[a(href="#")  @Fr4nkD3v]
+
+
+
+
+

@@ -1,0 +1,17 @@
+// Normalizar estilos de elementos html
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul { list-style: none; }
+
+input:focus { outline: none; }
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+button { border-style: solid; }
