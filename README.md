@@ -1,6 +1,6 @@
 # Home Page Web Static | ITCScience
 
-<div style="display: flex; gap: 1rem; padding: 2rem 0">
+<div style="display: flex; gap: 1rem; padding: 2rem 0;">
   <img src="./assets/svg/brand-logo.svg" alt="logo" width="100px" />
   <img src="./assets/svg/brand-text.svg" alt="logo" width="300px" />
 </div>
