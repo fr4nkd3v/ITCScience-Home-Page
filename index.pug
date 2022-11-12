@@ -5,6 +5,15 @@ html(lang="es")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="css/style.css")
+
+    style(type="text/css").
+      section.blog article.post:nth-child(1) .img::after{ background-image: url('/assets/images/software_post.webp'); }
+      section.blog article.post:nth-child(2) .img::after{ background-image: url('/assets/images/google_post.webp'); }
+      section.blog article.post:nth-child(3) .img::after{ background-image: url('/assets/images/security_post.webp'); }
+      section.blog article.post:nth-child(4) .img::after{ background-image: url('/assets/images/linux_post.webp'); }
+      section.blog article.post:nth-child(5) .img::after{ background-image: url('/assets/images/processor_post.webp'); }
+      section.blog article.post:nth-child(6) .img::after{ background-image: url('/assets/images/rust_post.webp'); }
+    
     title ITCScience
 
   body
@@ -134,7 +143,11 @@ html(lang="es")
             span 1
             span Objetivo
         
-        img(src="./assets/images/world-design.png", alt="imagen miembros")
+        .img-wrapper
+          img(src="./assets/images/world-design.png", alt="imagen miembros")
+          .ping
+          .ping
+          .ping
       
       section.blog: .wrapper
 
@@ -153,42 +166,42 @@ html(lang="es")
         .content
 
           article.post
-            img(src="/assets/images/software_post.webp", alt="imagen software")
+            .img
             .content
               .top #[span.by por Mario Cáceres] #[span.date Ayer]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
           
           article.post
-            img(src="/assets/images/google_post.webp", alt="imagen software")
+            .img
             .content
               .top #[span.by por Daniel Sepenser] #[span.date Hace 5 días]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
           
           article.post
-            img(src="/assets/images/security_post.webp", alt="imagen software")
+            .img
             .content
               .top #[span.by por Brandon Milton] #[span.date 15/10/2022]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
           
           article.post
-            img(src="/assets/images/linux_post.webp", alt="imagen software")
+            .img
             .content
               .top #[span.by por Mario Cáceres] #[span.date Ayer]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
           
           article.post
-            img(src="/assets/images/processor_post.webp", alt="imagen software")
+            .img
             .content
               .top #[span.by por Daniel Sepenser] #[span.date Hace 5 días]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
           
           article.post
-            img(src="/assets/images/rust_post.webp", alt="imagen software")
+            .img
             .content
               .top #[span.by por Brandon Milton] #[span.date 15/10/2022]
               .title Lorem Ipsum dolor sit amet

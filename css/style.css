@@ -88,6 +88,18 @@ body {
   overflow-x: hidden;
 }
 
+span::selection,
+div::selection,
+a::selection,
+p::selection {
+  background-color: #fff;
+  color: #181818;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  text-fill-color: initial;
+  -webkit-text-fill-color: initial;
+}
+
 section, footer {
   display: flex;
   justify-content: center;
@@ -100,14 +112,20 @@ section, footer {
 }
 
 .btn {
+  position: relative;
+  right: 0px;
   display: flex;
   gap: 0.8rem;
-  height: 3.4rem;
-  padding: 0 2rem;
   align-items: center;
   justify-content: center;
+  height: 3.4rem;
+  padding: 0 2rem;
   border-radius: 1.7rem;
   font-weight: 600;
+  transition: box-shadow 0.2s, background-position-x 0.2s cubic-bezier(0, 0.17, 0, 1.28), opacity 0.2s;
+}
+.btn span {
+  width: max-content;
 }
 .btn img {
   height: 1.6rem;
@@ -115,13 +133,28 @@ section, footer {
 
 .btn-light {
   background-color: #fff;
+  background: linear-gradient(-60deg, #fff 37.31%, #ffffffcc 51.29%, #fff 64.08%);
+  background-size: 200%;
+  background-position-x: 120%;
   color: #181818;
+  box-shadow: 0 0 0 #ffffffbb;
+}
+.btn-light:hover {
+  box-shadow: 0 0 15px #ffffffbb;
+  background-position-x: 50%;
 }
 
 .btn-dark {
   background-color: #000;
+  background: linear-gradient(-60deg, #000000 37.31%, #292929 51.29%, #000000 64.08%);
+  background-size: 200%;
+  background-position-x: 120%;
   color: #fff;
   border: 1px solid #E6E6E6;
+}
+.btn-dark:hover {
+  box-shadow: 0 0 15px #ffffff88, inset 0 0 6px 1px #ffffff88;
+  background-position-x: 50%;
 }
 
 section .wrapper > .header {
@@ -237,42 +270,6 @@ section.initial > .wrapper {
   align-items: flex-end;
   justify-content: center;
 }
-section.initial .back {
-  width: 30rem;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-}
-section.initial .back::before {
-  content: "";
-  display: block;
-  width: 50rem;
-  height: 50rem;
-  position: absolute;
-  bottom: -13rem;
-  left: 3rem;
-  background: radial-gradient(circle, #ffffff88 0%, #00000000 50%, #00000000 100%);
-  border-radius: 50%;
-  filter: blur(50px);
-}
-section.initial .back::after {
-  content: "";
-  display: block;
-  width: 50rem;
-  height: 50rem;
-  position: absolute;
-  bottom: -10rem;
-  left: -20rem;
-  background: radial-gradient(circle, #00000077 0%, #76767600 50%, #76767600 100%);
-  border-radius: 50%;
-}
-section.initial .back img {
-  position: absolute;
-  bottom: -13rem;
-  left: 0px;
-  width: 100%;
-  transform: rotate(16deg);
-}
 section.initial .header {
   display: initial;
   font-size: 2rem;
@@ -309,13 +306,59 @@ section.initial .wrapper-quote .back-quote::before, section.initial .wrapper-quo
   background: radial-gradient(50% 50% at 50% 50%, #959595 0%, rgba(24, 24, 24, 0) 100%);
   filter: blur(20px);
 }
+@keyframes move-light-quote-before {
+  0% {
+    top: -3rem;
+    left: -4rem;
+  }
+  35% {
+    top: -3rem;
+    left: calc(100% - 8rem);
+  }
+  50% {
+    top: calc(100% - 4.5rem);
+    left: calc(100% - 8rem);
+  }
+  85% {
+    top: calc(100% - 4.5rem);
+    left: -4rem;
+  }
+  100% {
+    top: -3rem;
+    left: -4rem;
+  }
+}
+@keyframes move-light-quote-after {
+  0% {
+    bottom: -3rem;
+    right: -4rem;
+  }
+  35% {
+    bottom: -3rem;
+    right: calc(100% - 8rem);
+  }
+  50% {
+    bottom: calc(100% - 4.5rem);
+    right: calc(100% - 8rem);
+  }
+  85% {
+    bottom: calc(100% - 4.5rem);
+    right: -4rem;
+  }
+  100% {
+    bottom: -3rem;
+    right: -4rem;
+  }
+}
 section.initial .wrapper-quote .back-quote::before {
   top: -3rem;
   left: -4rem;
+  animation: move-light-quote-before 30s linear infinite;
 }
 section.initial .wrapper-quote .back-quote::after {
   bottom: -3rem;
   right: -4rem;
+  animation: move-light-quote-after 30s linear infinite;
 }
 section.initial .quote {
   position: relative;
@@ -344,11 +387,46 @@ section.initial .row {
   width: 50%;
   display: flex;
   gap: 3rem;
-  margin-top: 4rem;
   justify-content: end;
+  position: relative;
+  z-index: 5;
+  margin-top: 4rem;
 }
-section.initial .row a {
-  flex: 0 0 15rem;
+section.initial .back {
+  width: 30rem;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+section.initial .back::before {
+  content: "";
+  display: block;
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  bottom: -13rem;
+  left: 3rem;
+  background: radial-gradient(circle, #ffffff88 0%, #00000000 50%, #00000000 100%);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+section.initial .back::after {
+  content: "";
+  display: block;
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  bottom: -10rem;
+  left: -20rem;
+  background: radial-gradient(circle, #00000077 0%, #76767600 50%, #76767600 100%);
+  border-radius: 50%;
+}
+section.initial .back img {
+  position: absolute;
+  bottom: -13rem;
+  left: 0px;
+  width: 100%;
+  transform: rotate(16deg);
 }
 
 section.our {
@@ -498,7 +576,7 @@ section.groups .content .group h1 img {
 section.groups .content .group p {
   font-size: 0.9rem;
   font-weight: 200;
-  color: #999999;
+  color: #B3B3B3;
   width: 90%;
   z-index: 20;
 }
@@ -508,15 +586,27 @@ section.groups .content .group > a {
   gap: 0.5rem;
   padding: 0 1.5rem;
   border-radius: 1.4rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
+  color: #181818;
   z-index: 20;
+}
+section.groups .content .group h1, section.groups .content .group p, section.groups .content .group > a {
+  opacity: 0.8;
 }
 section.groups .content .group > img {
   width: 14rem;
   border-radius: 50%;
   border: 2px solid #CCCCCC;
   z-index: 20;
+  filter: brightness(0.7);
+  transition: filter 0.4s;
+}
+section.groups .content .group:hover > img {
+  filter: brightness(1) contrast(1.1) saturate(1.1);
+}
+section.groups .content .group:hover > h1, section.groups .content .group:hover > p, section.groups .content .group:hover > a {
+  opacity: 1;
 }
 section.groups .content .group:nth-child(odd) {
   text-align: right;
@@ -578,6 +668,10 @@ section.community .wrapper {
   gap: 2rem;
   flex-direction: column;
 }
+section.community .header, section.community p,
+section.community .stats {
+  width: 50%;
+}
 section.community .header {
   align-items: flex-start;
 }
@@ -616,15 +710,225 @@ section.community .stats .stat span:first-child {
 section.community .stats .stat span:last-child {
   color: #808080;
 }
-section.community .header, section.community p,
-section.community .stats {
-  width: 50%;
-}
-section.community img {
+section.community .img-wrapper {
   position: absolute;
   right: 0px;
   top: calc(50% - 12rem);
   height: 24rem;
+}
+section.community .img-wrapper img {
+  height: 100%;
+}
+section.community .img-wrapper .ping {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #81D152;
+  box-shadow: 0 0 5px 1px #b5ff8b;
+  border-radius: 50%;
+  transform: scale(0);
+  position: absolute;
+}
+section.community .img-wrapper .ping:nth-child(2) {
+  top: 48.6%;
+  left: 12%;
+  animation: map-move 20s linear infinite;
+}
+section.community .img-wrapper .ping:nth-child(3) {
+  top: 48.6%;
+  left: 12%;
+  animation: map-move 20s linear 7s infinite;
+}
+section.community .img-wrapper .ping:nth-child(4) {
+  top: 48.6%;
+  left: 12%;
+  animation: map-move 20s linear 14s infinite;
+}
+@keyframes map-move {
+  0% {
+    top: 20%;
+    left: 23%;
+    transform: scale(1);
+  }
+  10% {
+    top: 42%;
+    left: 31%;
+    transform: scale(1);
+  }
+  11% {
+    top: 42%;
+    left: 31%;
+    transform: scale(0);
+  }
+  12% {
+    top: 44%;
+    left: 40%;
+    transform: scale(0);
+  }
+  13% {
+    top: 44%;
+    left: 40%;
+    transform: scale(1);
+  }
+  21% {
+    top: 14%;
+    left: 58%;
+    transform: scale(1);
+  }
+  22% {
+    top: 14%;
+    left: 58%;
+    transform: scale(0);
+  }
+  23% {
+    top: 14%;
+    left: 67%;
+    transform: scale(0);
+  }
+  24% {
+    top: 14%;
+    left: 67%;
+    transform: scale(1);
+  }
+  32% {
+    top: 52%;
+    left: 89%;
+    transform: scale(1);
+  }
+  33% {
+    top: 52%;
+    left: 89%;
+    transform: scale(0);
+  }
+  34% {
+    top: 62%;
+    left: 87%;
+    transform: scale(0);
+  }
+  35% {
+    top: 62%;
+    left: 87%;
+    transform: scale(1);
+  }
+  43% {
+    top: 65%;
+    left: 74%;
+    transform: scale(1);
+  }
+  44% {
+    top: 65%;
+    left: 74%;
+    transform: scale(0);
+  }
+  45% {
+    top: 72%;
+    left: 62%;
+    transform: scale(0);
+  }
+  46% {
+    top: 72%;
+    left: 62%;
+    transform: scale(1);
+  }
+  54% {
+    top: 85%;
+    left: 44%;
+    transform: scale(1);
+  }
+  55% {
+    top: 85%;
+    left: 44%;
+    transform: scale(0);
+  }
+  56% {
+    top: 86%;
+    left: 32%;
+    transform: scale(0);
+  }
+  57% {
+    top: 86%;
+    left: 32%;
+    transform: scale(1);
+  }
+  65% {
+    top: 80%;
+    left: 21%;
+    transform: scale(1);
+  }
+  66% {
+    top: 80%;
+    left: 21%;
+    transform: scale(0);
+  }
+  67% {
+    top: 69%;
+    left: 21%;
+    transform: scale(0);
+  }
+  68% {
+    top: 69%;
+    left: 21%;
+    transform: scale(1);
+  }
+  76% {
+    top: 59%;
+    left: 30%;
+    transform: scale(1);
+  }
+  77% {
+    top: 59%;
+    left: 30%;
+    transform: scale(0);
+  }
+  78% {
+    top: 51.4%;
+    left: 28%;
+    transform: scale(0);
+  }
+  79% {
+    top: 51.4%;
+    left: 28%;
+    transform: scale(1);
+  }
+  87% {
+    top: 48.6%;
+    left: 12%;
+    transform: scale(1);
+  }
+  88% {
+    top: 48.6%;
+    left: 12%;
+    transform: scale(0);
+  }
+  89% {
+    top: 38.5%;
+    left: 7%;
+    transform: scale(0);
+  }
+  90% {
+    top: 38.5%;
+    left: 7%;
+    transform: scale(1);
+  }
+  97% {
+    top: 19.5%;
+    left: 15.5%;
+    transform: scale(1);
+  }
+  98% {
+    top: 19.5%;
+    left: 15.5%;
+    transform: scale(0);
+  }
+  99% {
+    top: 20%;
+    left: 23%;
+    transform: scale(0);
+  }
+  100% {
+    top: 20%;
+    left: 23%;
+    transform: scale(1);
+  }
 }
 
 section.blog {
@@ -659,15 +963,43 @@ section.blog .wrapper .header .row a {
   flex: 0 0 16rem;
 }
 section.blog .wrapper article.post {
+  position: relative;
   width: 100%;
   border-radius: 1rem;
   border: 1px solid #666666;
-  overflow: hidden;
+  transition: box-shadow 0.2s;
 }
-section.blog .wrapper article.post img {
+section.blog .wrapper article.post::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: all 0.2s;
+  border-radius: 1rem;
+  border: 2px solid #B3B3B3;
+}
+section.blog .wrapper article.post .img {
   width: inherit;
   height: 15rem;
-  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+section.blog .wrapper article.post .img::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: grayscale(0.2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.2s;
 }
 section.blog .wrapper article.post .content {
   padding: 1.8rem 1.5rem;
@@ -690,6 +1022,20 @@ section.blog .wrapper article.post .content .description {
   font-size: 0.9rem;
   line-height: 1.3rem;
   word-spacing: 1px;
+}
+section.blog .wrapper article.post:hover::after {
+  width: calc(100% + 0.8rem);
+  height: calc(100% + 0.8rem);
+  top: calc(-0.4rem - 2px);
+  left: calc(-0.4rem - 2px);
+  border-radius: 1.45rem;
+  opacity: 1;
+  box-shadow: 0 0 15px #ffffff88;
+}
+section.blog .wrapper article.post:hover .img::after {
+  filter: grayscale(0) saturate(1.1) contrast(1.1);
+  opacity: 1;
+  transform: scale(1);
 }
 
 footer .wrapper {
