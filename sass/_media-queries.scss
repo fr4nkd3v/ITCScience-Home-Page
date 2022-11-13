@@ -1,0 +1,50 @@
+@media screen and (max-width: 1069px) {
+
+  section.initial .wrapper{
+    & > .back {
+      opacity: .2;
+    }
+  }
+
+}
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media screen and (max-width: 1199px) {}
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media screen and (max-width: 991px) {}
+
+
+@media screen and (max-width: 860px) {
+  // cambios del menú y nav
+  header {
+    .menu { display: flex; }
+
+    nav, .session-options { display: none; }
+
+    .menu-lateral {
+      display: block;
+    }
+  }
+}
+
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media screen and (max-width: 767px) {
+
+}
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media screen and (max-width: 575px) {
+  section.initial .wrapper {
+    & > .row {
+      gap: 1rem;
+      flex-direction: column;
+      a:first-child { align-self: flex-start; }
+      a:last-child {
+        align-self: flex-end;
+        padding: 0 2.8rem;
+      }
+    }
+  }
+}

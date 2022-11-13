@@ -18,20 +18,35 @@ html(lang="es")
 
   body
 
-    header
+    header: .wrapper
 
       .brand
         img.logo(src="./assets/svg/brand-logo.svg", alt="Logo de la Marca")
         img.name(src="./assets/svg/brand-text.svg", alt="Texto de la Marca")
       
+      .menu
+        .line
+        .line
+        .line
+      
       nav: ul
-          li: a.active(href="") INICIO
-          li: a(href="") BLOG
-          li: a(href="") COMUNIDAD
+          li: a.active(href="#") INICIO
+          li: a(href="#") BLOG
+          li: a(href="#") COMUNIDAD
       
       .session-options
         a(href="#") Iniciar Sesión
         a(href="#") Regístrate
+
+      .menu-lateral
+        ul
+          li: a.active(href="#") #[span INICIO]
+          li: a(href="#") #[span BLOG]
+          li: a(href="#") #[span COMUNIDAD]
+        .lat-session-options
+          a(href="#") Iniciar Sesión
+          a(href="#") Regístrate
+
   
     main
 
@@ -119,7 +134,12 @@ html(lang="es")
             img(src="./assets/images/sysadmin_group.jpg", alt="imagen grupo sysadmin")
             .circle
             .back
-      
+
+        .row
+          a.btn.btn-dark(href="#")
+            span Todos los Grupos
+            img(src="./assets/svg/eye.svg", alt="icono de artículo")
+
       section.community: .wrapper
 
         .header

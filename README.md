@@ -18,6 +18,4 @@ Este proyecto fue realizado con:
 
 Éste proyecto está desplegado y publicado en la web usando el servicio de hosting de *Github Pages*.
 
-Puede visitar la web ingresando a éste 👉 [link](https://fr4nkd3v.github.io/ITCScience-Home-Page/)
-
-<a href="https://fr4nkd3v.github.io/ITCScience-Home-Page/" target="_blank">Link</a>
+Puede visitar la web ingresando a éste link 👉 [Website ITCScience](https://fr4nkd3v.github.io/ITCScience-Home-Page/)
