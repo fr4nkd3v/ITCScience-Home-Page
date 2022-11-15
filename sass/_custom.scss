@@ -54,52 +54,58 @@ $secondary-color: #fff;
   100% { transform: rotate(180deg); }
 }
 
+
+// @keyframes rotate {
+//   0% {transform: rotate(0deg);}
+//   100% {transform: rotate(360deg);}
+// }
+
 // Animación de los div.ping
 @keyframes map-move {
-      0% { top: 19.7%; left: 23%; transform: scale(1);}
-      10% { top: 42%; left: 31%; transform: scale(1);}
-      11% { top: 42%; left: 31%; transform: scale(0);}
-      
-      12% { top: 44.2%; left: 39.2%; transform: scale(0);}
-      13% { top: 44.2%; left: 39.2%; transform: scale(1);}
-      21% { top: 15.1%; left: 57.1%; transform: scale(1);}
-      22% { top: 15.1; left: 57.1%; transform: scale(0);}
+  0% { top: 19.7%; left: 23%; transform: scale(1);}
+  10% { top: 42%; left: 31%; transform: scale(1);}
+  11% { top: 42%; left: 31%; transform: scale(0);}
+  
+  12% { top: 44.2%; left: 39.2%; transform: scale(0);}
+  13% { top: 44.2%; left: 39.2%; transform: scale(1);}
+  21% { top: 15.1%; left: 57.1%; transform: scale(1);}
+  22% { top: 15.1; left: 57.1%; transform: scale(0);}
 
-      23% { top: 14.2%; left: 67.1%; transform: scale(0);}
-      24% { top: 14.2%; left: 67.1%; transform: scale(1);}
-      32% { top: 51.2%; left: 88.7%; transform: scale(1);}
-      33% { top: 51.2%; left: 88.7%; transform: scale(0);}
-      
-      34% { top: 61.8%; left: 86.2%; transform: scale(0);}
-      35% { top: 61.8%; left: 86.2%; transform: scale(1);}
-      43% { top: 64.7%; left: 73.8%; transform: scale(1);}
-      44% { top: 64.7%; left: 73.8%; transform: scale(0);}
-      
-      45% { top: 72%; left: 61%; transform: scale(0);}
-      46% { top: 72%; left: 61%; transform: scale(1);}
-      54% { top: 85%; left: 44%; transform: scale(1);}
-      55% { top: 85%; left: 44%; transform: scale(0);}
-      
-      56% { top: 86%; left: 31.7%; transform: scale(0);}
-      57% { top: 86%; left: 31.7%; transform: scale(1);}
-      65% { top: 80.1%; left: 21.3%; transform: scale(1);}
-      66% { top: 80.1%; left: 21.3%; transform: scale(0);}
-      
-      67% { top: 68.8%; left: 21%; transform: scale(0);}
-      68% { top: 68.8%; left: 21%; transform: scale(1);}
-      76% { top: 59%; left: 29%; transform: scale(1);}
-      77% { top: 59%; left: 29%; transform: scale(0);}
-      
-      78% { top: 51.5%; left: 26.8%; transform: scale(0);}
-      79% { top: 51.5%; left: 26.8%; transform: scale(1);}
-      87% { top: 48.6%; left: 12.2%; transform: scale(1);}
-      88% { top: 48.6%; left: 12.2%; transform: scale(0);}
-      
-      89% { top: 37.9%; left: 6.8%; transform: scale(0);}
-      90% { top: 37.9%; left: 6.8%; transform: scale(1);}
-      97% { top: 20.1%; left: 14.8%; transform: scale(1);}
-      98% { top: 20.1%; left: 14.8%; transform: scale(0);}
-      
-      99% { top: 19.7%; left: 23%; transform: scale(0);}
-      100% { top: 19.7%; left: 23%; transform: scale(1);}
-    }
+  23% { top: 14.2%; left: 67.1%; transform: scale(0);}
+  24% { top: 14.2%; left: 67.1%; transform: scale(1);}
+  32% { top: 51.2%; left: 88.7%; transform: scale(1);}
+  33% { top: 51.2%; left: 88.7%; transform: scale(0);}
+  
+  34% { top: 61.8%; left: 86.2%; transform: scale(0);}
+  35% { top: 61.8%; left: 86.2%; transform: scale(1);}
+  43% { top: 64.7%; left: 73.8%; transform: scale(1);}
+  44% { top: 64.7%; left: 73.8%; transform: scale(0);}
+  
+  45% { top: 72%; left: 61%; transform: scale(0);}
+  46% { top: 72%; left: 61%; transform: scale(1);}
+  54% { top: 85%; left: 44%; transform: scale(1);}
+  55% { top: 85%; left: 44%; transform: scale(0);}
+  
+  56% { top: 86%; left: 31.7%; transform: scale(0);}
+  57% { top: 86%; left: 31.7%; transform: scale(1);}
+  65% { top: 80.1%; left: 21.3%; transform: scale(1);}
+  66% { top: 80.1%; left: 21.3%; transform: scale(0);}
+  
+  67% { top: 68.8%; left: 21%; transform: scale(0);}
+  68% { top: 68.8%; left: 21%; transform: scale(1);}
+  76% { top: 59%; left: 29%; transform: scale(1);}
+  77% { top: 59%; left: 29%; transform: scale(0);}
+  
+  78% { top: 51.5%; left: 26.8%; transform: scale(0);}
+  79% { top: 51.5%; left: 26.8%; transform: scale(1);}
+  87% { top: 48.6%; left: 12.2%; transform: scale(1);}
+  88% { top: 48.6%; left: 12.2%; transform: scale(0);}
+  
+  89% { top: 37.9%; left: 6.8%; transform: scale(0);}
+  90% { top: 37.9%; left: 6.8%; transform: scale(1);}
+  97% { top: 20.1%; left: 14.8%; transform: scale(1);}
+  98% { top: 20.1%; left: 14.8%; transform: scale(0);}
+  
+  99% { top: 19.7%; left: 23%; transform: scale(0);}
+  100% { top: 19.7%; left: 23%; transform: scale(1);}
+}

@@ -206,25 +206,66 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
     width: 3.5rem; height: 2.3rem;
     cursor: pointer;
 
     .line {
+      position: relative;
+      
       height: .3rem;
       background-color: $gray-9-color;
+      transition: all .2s ease-in-out;
     }
-    .line:nth-child(1) { width: 100%; }
-    .line:nth-child(2) { width: 75%; }
-    .line:nth-child(3) { width: 50%; }
+    .line:nth-child(1) {
+      width: 100%;
+      top: 0; left: 0;
+      transform-origin: bottom left;
+    }
+    .line:nth-child(2) {
+      width: 75%;
+      left: 0;
+    }
+    .line:nth-child(3) {
+      width: 50%;
+      bottom: 0;
+    }
+
+    &.active {
+      .line:nth-child(1) {
+        transform: rotate(45deg);
+        left: 10%; top: -12%;
+      }
+      .line:nth-child(3) {
+        width: 100%;
+        transform: rotate(-45deg);
+        bottom: 42%;
+      }
+      .line:nth-child(2) {
+        width: 0%;
+        left: -50%;
+      }
+    }
+
+    &.active ~ .lateral-menu {
+      left: 0%;
+    }
   }
 
-  .menu-lateral {
+  .lateral-menu {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%; height: calc(100vh - 6rem);
+    padding-bottom: 1rem;
     position: absolute;
-    top: 6rem; left: 0rem;
+    top: 6rem; left: 100%;
+
     background-color: #222222cc;
     backdrop-filter: blur(3px);
+
+    transition: left .5s ease-in-out;
+    
 
     li > a {
       position: relative;
@@ -232,8 +273,8 @@ header {
       display: flex;
       justify-content: center;
 
-      font-size: 1.5rem;
-      font-weight: 300;
+      font-size: 1.3rem;
+      font-weight: 400;
       letter-spacing: 4px;
       color: $gray-7-color;
       padding: 3rem 0;
@@ -271,6 +312,20 @@ header {
           width: 100%; left: 0px;
           background-color: $gray-9-color;
         }
+      }
+    }
+
+    .lat-session-options {
+      display: flex; gap: 2rem;
+      flex-direction: column;
+      padding: 2rem;
+
+      a {
+        font-size: 1.2rem;
+        height: auto;
+        padding: 1.5rem 0;
+        border-radius: 3rem;
+        font-feature-settings: 'ss01';
       }
     }
   }
@@ -407,9 +462,6 @@ section.initial {
     z-index: 5;
 
     margin-top: 4rem;
-    a {
-      // flex: 0 0 15rem;
-    }
   }
 
   .back {
@@ -453,6 +505,7 @@ section.initial {
 
 section.our {
   background: radial-gradient(circle, #00000088 0%, $primary-color 50%);
+
   .wrapper {
     padding: 10rem 0 5rem;
     display: flex; gap: 5rem;
@@ -484,35 +537,45 @@ section.our {
     flex-direction: column;
     align-items: center;
     
-    img {
-      width: 54rem;
-    }
-    
-    &::before,
-    &::after {
-      content: ""; display: block;
-      position: absolute;
-      
-      background-image: url('/assets/svg/ellipse-dotted.svg');
+    .img {
+      position: relative;
+      width: 54rem; height: 19rem;
       background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
 
-      transform: rotate(0deg);
-      animation: rotate 20s linear infinite;
+      &::before{
+        content: ""; display: block;
+        position: absolute;
+        
+        background-image: url('/assets/svg/ellipse-dotted.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transform: rotate(0deg);
+        animation: rotate0 20s linear infinite;
+      }
     }
-    &::before {
-      width: 17.15rem; height: 17.15rem;
-      top: 0.7%;
+
+    .img:first-child {
+      background-image: url('/assets/svg/top-design-ourSection.svg');
+      &::before {
+        width: 17.2rem; height: 17.2rem;
+        left: calc(50% - 8.6rem);
+        top: .3rem;
+      }
     }
-    &::after {
-      width: 14.78rem; height: 14.78rem;
-      bottom: 0.7%;
-      animation-direction: reverse;
+    .img:last-child {
+      background-image: url('/assets/svg/bottom-design-ourSection.svg');
+      &::before {
+        width: 14.76rem; height: 14.76rem;
+        left: calc(50% - 7.35rem);
+        bottom: .6rem;
+        animation-direction: reverse;
+      }
     }
-    @keyframes rotate {
-      0% {transform: rotate(0deg);}
-      100% {transform: rotate(360deg);}
-    }
+    
+    
 
     .paragraphs {
       width: 100%;
@@ -526,6 +589,10 @@ section.our {
       line-height: 2rem;
       letter-spacing: 1px;
       word-spacing: 2px;
+
+      .arrow {
+        display: none;
+      }
 
       p {
         background-color: #222;

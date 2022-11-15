@@ -38,15 +38,14 @@ html(lang="es")
         a(href="#") Iniciar Sesión
         a(href="#") Regístrate
 
-      .menu-lateral
+      .lateral-menu
         ul
           li: a.active(href="#") #[span INICIO]
           li: a(href="#") #[span BLOG]
           li: a(href="#") #[span COMUNIDAD]
         .lat-session-options
-          a(href="#") Iniciar Sesión
-          a(href="#") Regístrate
-
+          a.btn.btn-light(href="#") INICIAR SESION
+          a.btn.btn-dark(href="#") REGISTRARME
   
     main
 
@@ -78,17 +77,19 @@ html(lang="es")
       
       section.our: .wrapper
 
-          .header
-            .subtitle Nosotros
-            .title Qué es #[span ITCScience] ?
-            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, enim? Labore mollitia natus modi, explicabo architecto molestias aperiam sapiente similique numquam.
-          
-          .content
-            img(src="./assets/svg/top-design-ourSection.svg", alt="diseño posterior")
-            .paragraphs
-              p Desde ITCScience #[span divulgamos y compartimos la ciencia] desde un enfoque cultural, con el fin de introducir a más individuos a un mundo de conocimientos.
-              p Formamos esta organización con la #[span visión de difundir, compartir y participar], junto a ésta comunidad, a formar parte de multiples iniciativas y proyectos.
-            img(src="./assets/svg/bottom-design-ourSection.svg", alt="diseño inferior")
+        .header
+          .subtitle Nosotros
+          .title Qué es #[span ITCScience] ?
+          p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, enim? Labore mollitia natus modi, explicabo architecto molestias aperiam sapiente similique numquam.
+        
+        .content
+          .img
+          .paragraphs
+            .arrow
+            .arrow
+            p Desde ITCScience #[span divulgamos y compartimos la ciencia] desde un enfoque cultural, con el fin de introducir a más individuos a un mundo de conocimientos.
+            p Formamos esta organización con la #[span visión de difundir, compartir y participar], junto a ésta comunidad, a formar parte de multiples iniciativas y proyectos.
+          .img
       
       section.groups: .wrapper
 
@@ -242,6 +243,8 @@ html(lang="es")
       span.copyright Copyright © 2022 ITCScience All rights reserved.
       
       .by Designed and Developed by #[a(href="#")  @Fr4nkD3v]
+
+    script(src="script.js")
 
 
 
