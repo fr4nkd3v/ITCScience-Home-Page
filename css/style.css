@@ -828,14 +828,14 @@ section.our .content .img::before {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("/assets/svg/ellipse-dotted.svg");
+  background-image: url("../assets/svg/ellipse-dotted.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(0deg);
   animation: rotate0 20s linear infinite;
 }
 section.our .content .img:first-child {
-  background-image: url("/assets/svg/top-design-ourSection.svg");
+  background-image: url("../assets/svg/top-design-ourSection.svg");
 }
 section.our .content .img:first-child::before {
   width: 17.2rem;
@@ -844,7 +844,7 @@ section.our .content .img:first-child::before {
   top: 0.3rem;
 }
 section.our .content .img:last-child {
-  background-image: url("/assets/svg/bottom-design-ourSection.svg");
+  background-image: url("../assets/svg/bottom-design-ourSection.svg");
 }
 section.our .content .img:last-child::before {
   width: 14.76rem;
@@ -1070,7 +1070,7 @@ section.groups .content::before {
   top: 0rem;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url("/assets/svg/vertical-line-down.svg");
+  background-image: url("../assets/svg/vertical-line-down.svg");
   background-position: center 0;
   background-size: contain;
   background-repeat: no-repeat;

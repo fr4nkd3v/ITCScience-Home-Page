@@ -548,7 +548,7 @@ section.our {
         content: ""; display: block;
         position: absolute;
         
-        background-image: url('/assets/svg/ellipse-dotted.svg');
+        background-image: url('../assets/svg/ellipse-dotted.svg');
         background-size: contain;
         background-repeat: no-repeat;
 
@@ -558,7 +558,7 @@ section.our {
     }
 
     .img:first-child {
-      background-image: url('/assets/svg/top-design-ourSection.svg');
+      background-image: url('../assets/svg/top-design-ourSection.svg');
       &::before {
         width: 17.2rem; height: 17.2rem;
         left: calc(50% - 8.6rem);
@@ -566,7 +566,7 @@ section.our {
       }
     }
     .img:last-child {
-      background-image: url('/assets/svg/bottom-design-ourSection.svg');
+      background-image: url('../assets/svg/bottom-design-ourSection.svg');
       &::before {
         width: 14.76rem; height: 14.76rem;
         left: calc(50% - 7.35rem);
@@ -769,7 +769,7 @@ section.groups {
       top: 0rem; left: 50%;
       transform: translateX(-50%);
       
-      background-image: url('/assets/svg/vertical-line-down.svg');
+      background-image: url('../assets/svg/vertical-line-down.svg');
       background-position: center 0;
       background-size: contain;
       background-repeat: no-repeat;
