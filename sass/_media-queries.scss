@@ -17,7 +17,64 @@
 }
 
 /* Pantallas grandes (desktops de menos de 1200px) */
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+
+
+  section.community .wrapper {
+
+    align-items: center;
+
+    .header, p, .stats {
+      width: 100%;
+    }
+    .header { align-items: center; }
+    
+    p {
+      max-width: 50rem;
+      text-align: center;
+    }
+
+    .stats { justify-content: center; }
+
+    .img-wrapper {
+      position: relative;
+      top: initial; right: initial;
+      transform: initial;
+      width: fit-content;
+    }
+  }
+
+}
+
+
+// Custom media query for section.groups
+@media screen and (max-width: 1090px) {
+
+  section.groups .content {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+
+    .group:nth-child(n) {
+      & > img { width: 11rem; }
+
+      .circle, .back { width: 16rem; height: 16rem; }
+
+      .circle {
+        &::after { transform-origin: 7.8rem 7.8rem; }
+        &::before { transform-origin: -4rem -4rem; }
+      }
+    }
+    
+    .group:nth-child(1),
+    .group:nth-child(3) { justify-self: end; }
+    .group:nth-child(2),
+    .group:nth-child(4) { justify-self: start; }
+
+    &::before { opacity: .5; }
+    &::after { background-color: $gray-4-color; }
+  }
+}
+
 
 /* Pantallas medianas (tablets de menos de 992px) */
 @media screen and (max-width: 991px) {
@@ -111,7 +168,51 @@
 /* Pantallas pequeñas (móviles en landscape de menos de 768px) */
 @media screen and (max-width: 767px) {
 
+
+  section.groups .content {
+    row-gap: 4rem;
+
+    .group:nth-child(n) {
+
+      .circle, .back { width: 14rem; height: 14rem; }
+
+      .circle {
+        &::after { transform-origin: 6.8rem 6.8rem; }
+        &::before { transform-origin: -3.5rem -3.5rem; }
+      }
+    }
+    
+    .group:nth-child(1),
+    .group:nth-child(3) { justify-self: end; }
+    .group:nth-child(2),
+    .group:nth-child(4) { justify-self: start; }
+
+    &::before { opacity: .5; }
+    &::after { background-color: $gray-4-color; }
+  }
+
 }
+
+
+@media screen and (max-width: 650px) {
+  
+  
+  section.community .wrapper {
+
+    .header {
+      text-align: center;
+    }
+
+    .img-wrapper {
+      width: 100%; height: auto;
+
+      img { width: 100%; height: auto; }
+      .ping { width: .5rem; height: .5rem; }
+    }
+  }
+
+}
+
 
 /* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
 @media screen and (max-width: 575px) {
