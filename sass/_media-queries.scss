@@ -27,7 +27,7 @@
 
     .img:first-child {
       height: 18rem;
-      background-image: url('/assets/svg/top-design-ourSection-mobile.svg');
+      background-image: url('../assets/svg/top-design-ourSection-mobile.svg');
       &::before {
         width: 17.3rem; height: 17.3rem;
         left: calc(50% - 8.65rem);
@@ -36,7 +36,7 @@
 
     .img:last-child {
       height: 16rem;
-      background-image: url('/assets/svg/bottom-design-ourSection-mobile.svg');
+      background-image: url('../assets/svg/bottom-design-ourSection-mobile.svg');
       &::before {
         width: 15.3rem; height: 15.3rem;
         left: calc(50% - 7.65rem);
@@ -69,7 +69,7 @@
         }
       }
       .arrow:nth-child(1) {
-        background-image: url('/assets/svg/arrow-up.svg');
+        background-image: url('../assets/svg/arrow-up.svg');
         transform: translate(calc(-50% - 2rem), calc(-50% - .1rem));
         
         &::after {
@@ -78,7 +78,7 @@
         }
       }
       .arrow:nth-child(2) {
-        background-image: url('/assets/svg/arrow-down.svg');
+        background-image: url('../assets/svg/arrow-down.svg');
         transform: translate(calc(-50% + 2rem), calc(-50% + .1rem));
         background-position: bottom;
 

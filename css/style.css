@@ -1354,7 +1354,7 @@ footer .by a:hover {
   }
   section.our .content .img:first-child {
     height: 18rem;
-    background-image: url("/assets/svg/top-design-ourSection-mobile.svg");
+    background-image: url("../assets/svg/top-design-ourSection-mobile.svg");
   }
   section.our .content .img:first-child::before {
     width: 17.3rem;
@@ -1363,7 +1363,7 @@ footer .by a:hover {
   }
   section.our .content .img:last-child {
     height: 16rem;
-    background-image: url("/assets/svg/bottom-design-ourSection-mobile.svg");
+    background-image: url("../assets/svg/bottom-design-ourSection-mobile.svg");
   }
   section.our .content .img:last-child::before {
     width: 15.3rem;
@@ -1399,7 +1399,7 @@ footer .by a:hover {
     border-radius: 50%;
   }
   section.our .content .paragraphs .arrow:nth-child(1) {
-    background-image: url("/assets/svg/arrow-up.svg");
+    background-image: url("../assets/svg/arrow-up.svg");
     transform: translate(calc(-50% - 2rem), calc(-50% - 0.1rem));
   }
   section.our .content .paragraphs .arrow:nth-child(1)::after {
@@ -1408,7 +1408,7 @@ footer .by a:hover {
     transform: translate(-50%, 50%);
   }
   section.our .content .paragraphs .arrow:nth-child(2) {
-    background-image: url("/assets/svg/arrow-down.svg");
+    background-image: url("../assets/svg/arrow-down.svg");
     transform: translate(calc(-50% + 2rem), calc(-50% + 0.1rem));
     background-position: bottom;
   }
