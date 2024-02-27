@@ -1,21 +1,14 @@
 # Home Page Web Static | ITCScience
 
-<div style="display: flex; gap: 1rem; padding: 2rem 0;">
-  <img src="./assets/svg/brand-logo.svg" alt="logo" width="100px" />
-  <img src="./assets/svg/brand-text.svg" alt="logo" width="300px" />
-</div>
+![ITCScience Logo](./public/assets/svg/brand-logo.svg)
 
-Ésta es una Web de Inicio para la organización **ITCScience**, especializada en Tecnologías de la Información y Ciencias de la Computación.
+Home web for the **ITCScience organization**, dedicated to the dissemination of topics related to information technology and computer science.
 
-## Tecnologías
+## Tecnologies
 
-Este proyecto fue realizado con:
-
-- Pug (Preprocesador HTML)
-- Sass (Preprocesador CSS)
+- Pug (Preprocessor HTML)
+- Sass (Preprocessor CSS)
 
 ## Hosting
 
-Éste proyecto está desplegado y publicado en la web usando el servicio de hosting de *Github Pages*.
-
-Puede visitar la web ingresando a éste link 👉 [Website ITCScience](https://fr4nkd3v.github.io/ITCScience-Home-Page/)
+This project is hosted and published on the web using the *Github Pages* hosting service, visit it here 👉 [Website ITCScience](https://fr4nkd3v.github.io/ITCScience-Home-Page/).

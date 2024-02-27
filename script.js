@@ -9,8 +9,6 @@ function handlerClickMenuBtn() {
 
 // Event Listeners
 function eventListeners() {
-  
   menuBtn.addEventListener('click', handlerClickMenuBtn);
-
 }
 eventListeners();
