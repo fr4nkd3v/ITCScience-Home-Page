@@ -4,12 +4,22 @@
   "description": "![ITCScience Logo](./assets/svg/brand-logo.svg)",
   "main": "script.js",
   "scripts": {
+    "start": "wds --app-index public/index.html --open",
+    "dev": "wds --app-index public/index.html --watch --open",
+    "watch:html": "pug -P -w src/index.pug --out public/",
+    "watch:css": "sass -w src/sass/main.scss public/css/style.css",
+    "dev:watch": "conc \"npm:dev\" \"npm:watch:*\"",
+    "build:html": "pug -P src/index.pug --out public/",
+    "build:css": "sass src/sass/main.scss public/css/style.css",
+    "build": "npm run build:html && npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "pug": "^3.0.2",
+    "@web/dev-server": "^0.4.3",
+    "concurrently": "^8.2.2",
+    "pug-cli": "^1.0.0-alpha6",
     "sass": "^1.71.1"
   }
 }

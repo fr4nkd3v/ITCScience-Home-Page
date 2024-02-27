@@ -53,9 +53,9 @@ section, footer {
   padding: 0 2rem;
   border-radius: 1.7rem;
   font-weight: 600;
-  
+
   transition: box-shadow .2s, background-position-x .4s cubic-bezier(0, .17, 0, 1), opacity .2s;
-  
+
   span { width: max-content; }
   img { height: 1.6rem; }
 }
@@ -65,10 +65,10 @@ section, footer {
   background: linear-gradient(-60deg, $secondary-color 37.31%, #ffffffcc 51.29%, $secondary-color 64.08%);
   background-size: 200%;
   background-position-x: 120%;
-  
+
   color: $primary-color;
   box-shadow: 0 0 0 #ffffffbb;
-  
+
   &:hover {
     box-shadow: 0 0 15px #ffffffbb;
     background-position-x: 50%;
@@ -80,7 +80,7 @@ section, footer {
   background: linear-gradient(-60deg, #000000 37.31%, #292929 51.29%, #000000 64.08%);
   background-size: 200%;
   background-position-x: 120%;
-  
+
   color: $secondary-color;
   border: 1px solid $gray-9-color;
 
@@ -125,7 +125,7 @@ header {
   justify-content: center;
   font-weight: 700;
   font-size: .9rem;
-  
+
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -150,7 +150,7 @@ header {
       color: $gray-6-color;
       position: relative;
       padding: .5rem 0;
-      
+
       &.active { color: $secondary-color; }
 
       &::after {
@@ -212,7 +212,7 @@ header {
 
     .line {
       position: relative;
-      
+
       height: .3rem;
       background-color: $gray-9-color;
       transition: all .2s ease-in-out;
@@ -265,7 +265,7 @@ header {
     backdrop-filter: blur(3px);
 
     transition: left .5s ease-in-out;
-    
+
 
     li > a {
       position: relative;
@@ -288,7 +288,7 @@ header {
       }
 
       span { position: relative; }
-      
+
     }
 
     li > a:not(.active) {
@@ -307,7 +307,7 @@ header {
 
         color: $gray-9-color;
         text-shadow: 0 0 10px #ffffff88;
-        
+
         span::after {
           width: 100%; left: 0px;
           background-color: $gray-9-color;
@@ -334,7 +334,7 @@ header {
 section.initial {
   height: calc(100vh - 6rem);
   background: radial-gradient(circle, #00000088 0%, $primary-color 50%);
-  
+
 
   & > .wrapper {
     position: relative;
@@ -384,12 +384,12 @@ section.initial {
     z-index: 0;
     top: 0; left: 0;
     // background-color: red;
-    
+
     .back-quote {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      
+
       &::before, &::after {
         content: ""; display: block;
         width: 12rem; height: 8rem;
@@ -421,7 +421,7 @@ section.initial {
       &::after {
         bottom: -3rem; right: -4rem;
         animation: move-light-quote-after 30s linear infinite;
-        
+
       }
     }
   }
@@ -536,7 +536,7 @@ section.our {
     display: flex; gap: 1rem;
     flex-direction: column;
     align-items: center;
-    
+
     .img {
       position: relative;
       width: 54rem; height: 19rem;
@@ -547,7 +547,7 @@ section.our {
       &::before{
         content: ""; display: block;
         position: absolute;
-        
+
         background-image: url('../assets/svg/ellipse-dotted.svg');
         background-size: contain;
         background-repeat: no-repeat;
@@ -574,8 +574,8 @@ section.our {
         animation-direction: reverse;
       }
     }
-    
-    
+
+
 
     .paragraphs {
       width: 100%;
@@ -647,14 +647,14 @@ section.groups {
       row-gap: 1rem;
       width: fit-content;
       grid-auto-rows: auto;
-      
+
       .back {
         height: 18rem; width: 18rem;
         position: absolute;
 
         left: 50%; top: 50%;
         transform: translate(-50%, -50%);
-        
+
         border: 1px solid $gray-4-color;
         border-radius: 50%;
         background-color: rgba(24, 24, 24, 0.5);;
@@ -672,7 +672,7 @@ section.groups {
         &::before {
           content: ""; display: block;
           width: 20%; height: 20%;
-  
+
           position: absolute;
           bottom: 12px; right: 12px;
           z-index: -1;
@@ -684,11 +684,11 @@ section.groups {
           transform: rotate(0deg);
           animation: rotate0 50s linear infinite;
         }
-        
+
         &::after {
           content: ""; display: block;
           width: 30%; height: 30%;
-          
+
           position: absolute;
           top: 5px; left: 5px;
           z-index: -1;
@@ -700,7 +700,7 @@ section.groups {
           animation: rotate0 50s linear infinite;
         }
       }
-      
+
       h1 {
         font-size: 1.6rem;
         font-weight: 800;
@@ -722,7 +722,7 @@ section.groups {
         gap: .5rem;
         padding: 0 1.5rem;
         border-radius: 1.4rem;
-        
+
         font-size: .9rem;
         font-weight: 700;
         color: $primary-color;
@@ -769,7 +769,7 @@ section.groups {
       position: absolute;
       top: 0rem; left: 50%;
       transform: translateX(-50%);
-      
+
       background-image: url('../assets/svg/vertical-line-down.svg');
       background-position: center bottom;
       background-size: .8rem auto;
@@ -853,7 +853,7 @@ section.community {
       }
     }
   }
-  
+
   .img-wrapper {
     position: absolute;
     right: 2rem; top: 50%;
@@ -871,7 +871,7 @@ section.community {
       box-shadow: 0 0 5px 1px #b5ff8b;
       border-radius: 50%;
       transform: scale(0);
-  
+
       position: absolute;
       &:nth-child(2) {
         top: 48.6%; left: 12%;
@@ -887,7 +887,7 @@ section.community {
       }
     }
 
-    
+
   }
 
 }
@@ -904,7 +904,7 @@ section.blog {
       display: grid; gap: 3rem;
       grid-template-columns: repeat(3, 1fr);
       grid-auto-rows: 1fr;
-  
+
     }
 
     .header {
@@ -949,7 +949,7 @@ section.blog {
         opacity: 0;
 
         transition: all .2s;
-        
+
         border-radius: 1rem;
         border: 2px solid $gray-9-color;
       }
@@ -1016,7 +1016,7 @@ footer {
   .wrapper {
     display: grid; row-gap: 2rem;
     grid-template-columns: 1fr auto;
-    
+
     padding: 2rem 0;
   }
 

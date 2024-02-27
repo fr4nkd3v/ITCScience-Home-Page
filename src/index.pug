@@ -5,6 +5,9 @@ html(lang="es")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="css/style.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap", rel="stylesheet")
 
     style(type="text/css").
       section.blog article.post:nth-child(1) .img::after{ background-image: url('./assets/images/software_post.webp'); }
@@ -13,7 +16,6 @@ html(lang="es")
       section.blog article.post:nth-child(4) .img::after{ background-image: url('./assets/images/linux_post.webp'); }
       section.blog article.post:nth-child(5) .img::after{ background-image: url('./assets/images/processor_post.webp'); }
       section.blog article.post:nth-child(6) .img::after{ background-image: url('./assets/images/rust_post.webp'); }
-    
     title ITCScience
 
   body
@@ -23,17 +25,17 @@ html(lang="es")
       .brand
         img.logo(src="./assets/svg/brand-logo.svg", alt="Logo de la Marca")
         img.name(src="./assets/svg/brand-text.svg", alt="Texto de la Marca")
-      
+
       .menu
         .line
         .line
         .line
-      
+
       nav: ul
           li: a.active(href="#") INICIO
           li: a(href="#") BLOG
           li: a(href="#") COMUNIDAD
-      
+
       .session-options
         a(href="#") Iniciar Sesión
         a(href="#") Regístrate
@@ -46,7 +48,7 @@ html(lang="es")
         .lat-session-options
           a.btn.btn-light(href="#") INICIAR SESION
           a.btn.btn-dark(href="#") REGISTRARME
-  
+
     main
 
       section.initial: .wrapper
@@ -54,7 +56,7 @@ html(lang="es")
           .header
             img(src="./assets/images/hand.png", alt="")
             | #[span Bienvenido ] a nuestra Comunidad!
-          
+
           .wrapper-quote
             .back-quote
             .quote
@@ -63,7 +65,7 @@ html(lang="es")
                 | la ignorancia, sino la #[span Ilusión] #[br]
                 | del conocimiento"
               .autor - Stephen Hawking
-          
+
           .row
             a.btn.btn-light(href="#")
               img(src="./assets/svg/people-community-28-filled.svg", alt="icono comunidad")
@@ -71,17 +73,17 @@ html(lang="es")
             a.btn.btn-dark(href="#")
               span Conocer más
               img(src="./assets/svg/arrow-down-circle.svg", alt="icono flecha abajo")
-              
+
           .back
             img.logo(src="./assets/images/logo-design.png", alt="diseño del logo")
-      
+
       section.our: .wrapper
 
         .header
           .subtitle Nosotros
           .title Qué es #[span ITCScience] ?
           p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, enim? Labore mollitia natus modi, explicabo architecto molestias aperiam sapiente similique numquam.
-        
+
         .content
           .img
           .paragraphs
@@ -90,7 +92,7 @@ html(lang="es")
             p Desde ITCScience #[span divulgamos y compartimos la ciencia] desde un enfoque cultural, con el fin de introducir a más individuos a un mundo de conocimientos.
             p Formamos esta organización con la #[span visión de difundir, compartir y participar], junto a ésta comunidad, a formar parte de multiples iniciativas y proyectos.
           .img
-      
+
       section.groups: .wrapper
 
         .header
@@ -146,10 +148,10 @@ html(lang="es")
         .header
           .subtitle Comunidad
           .title Nuestra #[span Comunidad]
-        
+
         p
           | Conformada en su mayoría por miembros de toda Latam, formamos una gran comunidad que #[span aporta] y #[span aprende] cada día, y que fomenta el aprendizaje y la educación en torno a las #[span ciencias de la computación y la informática].
-        
+
         .stats
           .stat
             span +800
@@ -163,13 +165,13 @@ html(lang="es")
           .stat
             span 1
             span Objetivo
-        
+
         .img-wrapper
           img(src="./assets/images/world-design.png", alt="imagen miembros")
           .ping
           .ping
           .ping
-      
+
       section.blog: .wrapper
 
         .header
@@ -183,7 +185,7 @@ html(lang="es")
             a.btn.btn-dark(href="#")
               img(src="./assets/svg/mail-newsletter.svg", alt="icono de newsletter")
               span Recibir Newsletter
-        
+
         .content
 
           article.post
@@ -192,48 +194,48 @@ html(lang="es")
               .top #[span.by por Mario Cáceres] #[span.date Ayer]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
-          
+
           article.post
             .img
             .content
               .top #[span.by por Daniel Sepenser] #[span.date Hace 5 días]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
-          
+
           article.post
             .img
             .content
               .top #[span.by por Brandon Milton] #[span.date 15/10/2022]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
-          
+
           article.post
             .img
             .content
               .top #[span.by por Mario Cáceres] #[span.date Ayer]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
-          
+
           article.post
             .img
             .content
               .top #[span.by por Daniel Sepenser] #[span.date Hace 5 días]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
-          
+
           article.post
             .img
             .content
               .top #[span.by por Brandon Milton] #[span.date 15/10/2022]
               .title Lorem Ipsum dolor sit amet
               .description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet tincidunt adipiscing pretium urna, massa.
-        
+
     footer: .wrapper
 
       .brand
         img.logo(src="./assets/svg/brand-logo.svg", alt="Logo de la marca")
         img.name(src="./assets/svg/brand-text.svg", alt="Texto de la marca")
-      
+
       .links
         a(href="#") Blog
         a(href="#") Comunidad
@@ -241,7 +243,7 @@ html(lang="es")
         a(href="#") Privacidad
 
       span.copyright Copyright © 2022 ITCScience All rights reserved.
-      
+
       .by Designed and Developed by #[a(href="#")  @Fr4nkD3v]
 
     script(src="script.js")
