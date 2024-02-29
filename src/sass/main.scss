@@ -13,8 +13,10 @@ html {
 body {
   background-color: $primary-color;
   color: $gray-9-color;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
   overflow-x: hidden;
 }
 
@@ -34,6 +36,11 @@ section, footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.font-style-3 {
+  font-variant-ligatures: no-historical-ligatures;
+  font-feature-settings: "ss01" 0, "ss02" 0, "ss03";
 }
 
 .wrapper {
@@ -125,6 +132,8 @@ header {
   justify-content: center;
   font-weight: 700;
   font-size: .9rem;
+  background-color: rgba(20, 20, 20, 40%);
+  backdrop-filter: blur(7px);
 
   .wrapper {
     display: flex;
@@ -491,7 +500,7 @@ section.initial {
     img {
       position: absolute;
       bottom: -13rem; left: 0px;
-      width: 100%;
+      width: 90%;
       transform: rotate(16deg);
     }
   }

@@ -4,8 +4,8 @@
   "description": "![ITCScience Logo](./assets/svg/brand-logo.svg)",
   "main": "script.js",
   "scripts": {
-    "start": "wds --app-index public/index.html --open",
-    "dev": "wds --app-index public/index.html --watch --open",
+    "start": "wds --root-dir public/ --open",
+    "dev": "wds --root-dir public/ --watch --open",
     "watch:html": "pug -P -w src/index.pug --out public/",
     "watch:css": "sass -w src/sass/main.scss public/css/style.css",
     "dev:watch": "conc \"npm:dev\" \"npm:watch:*\"",

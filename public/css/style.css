@@ -27,32 +27,32 @@ button {
 /* #region Basics Colors*/
 /* #endregion */
 @font-face {
-  font-family: "Jakarta";
-  src: url("/assets/fonts/PlusJakartaSans-Light.woff") format("woff");
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Jakarta";
-  src: url("/assets/fonts/PlusJakartaSans-Regular.woff") format("woff");
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Jakarta";
-  src: url("/assets/fonts/PlusJakartaSans-SemiBold.woff") format("woff");
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Jakarta";
-  src: url("/assets/fonts/PlusJakartaSans-Bold.woff") format("woff");
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Jakarta";
-  src: url("/assets/fonts/PlusJakartaSans-ExtraBold.woff") format("woff");
+  font-family: "Plus Jakarta Sans";
+  src: url("../assets/fonts/PlusJakartaSans-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -276,7 +276,9 @@ body {
   background-color: #141414;
   color: #E6E6E6;
   font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
   overflow-x: hidden;
 }
 
@@ -296,6 +298,11 @@ section, footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.font-style-3 {
+  font-variant-ligatures: no-historical-ligatures;
+  font-feature-settings: "ss01" 0, "ss02" 0, "ss03";
 }
 
 .wrapper {
@@ -381,6 +388,8 @@ header {
   justify-content: center;
   font-weight: 700;
   font-size: 0.9rem;
+  background-color: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(7px);
 }
 header .wrapper {
   display: flex;
@@ -777,7 +786,7 @@ section.initial .back img {
   position: absolute;
   bottom: -13rem;
   left: 0px;
-  width: 100%;
+  width: 90%;
   transform: rotate(16deg);
 }
 section.initial .header, section.initial .wrapper-quote, section.initial .row {
