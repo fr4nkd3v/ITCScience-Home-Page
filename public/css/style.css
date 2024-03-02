@@ -270,6 +270,7 @@ button {
 }
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -449,7 +450,7 @@ header .session-options {
   align-items: center;
 }
 header .session-options a:first-child {
-  font-weight: 500;
+  font-weight: 600;
   background-color: #fff;
   color: #141414;
   padding: 0.5rem 0.8rem;
@@ -586,6 +587,7 @@ header .lateral-menu .lat-session-options a {
 
 section.initial {
   height: calc(100vh - 6rem);
+  min-height: 590px;
   background: radial-gradient(circle, rgba(0, 0, 0, 0.5333333333) 0%, #141414 50%);
 }
 section.initial > .wrapper {
@@ -608,14 +610,16 @@ section.initial .header span {
   font-size: 4rem;
   font-weight: 800;
 }
-section.initial .header img {
+section.initial .header .hand {
   width: 4rem;
   margin-right: 0.8rem;
   transform: rotate(0deg);
   transform-origin: 90% 90%;
+}
+section.initial .header .hand.first-animate {
   animation: hi 1.2s ease-in-out 1s;
 }
-section.initial .header img:focus {
+section.initial .header .hand.animate {
   animation: hi 1.2s ease-in-out;
 }
 @keyframes hi {
@@ -746,11 +750,14 @@ section.initial .quote .autor {
 section.initial .row {
   width: 100%;
   display: flex;
-  gap: 3rem;
+  gap: 1.8rem;
   justify-content: end;
   position: relative;
   z-index: 5;
   margin-top: 4rem;
+}
+section.initial .row .btn {
+  min-width: 14.7rem;
 }
 section.initial .back {
   width: 30rem;
@@ -798,7 +805,8 @@ section.our {
   background: radial-gradient(circle, rgba(0, 0, 0, 0.5333333333) 0%, #141414 50%);
 }
 section.our .wrapper {
-  padding: 10rem 0 5rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
   display: flex;
   gap: 5rem;
   flex-direction: column;
@@ -1222,9 +1230,10 @@ section.blog .wrapper .header .row a {
   flex: 0 0 16rem;
 }
 section.blog .wrapper article.post {
+  --border-radius: 8px;
   position: relative;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   border: 1px solid #666666;
   transition: box-shadow 0.2s;
 }
@@ -1234,17 +1243,18 @@ section.blog .wrapper article.post::after {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.2s;
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   border: 2px solid #E6E6E6;
 }
 section.blog .wrapper article.post .img {
   width: inherit;
   height: 15rem;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   overflow: hidden;
 }
 section.blog .wrapper article.post .img::after {
@@ -1283,11 +1293,11 @@ section.blog .wrapper article.post .content .description {
   word-spacing: 1px;
 }
 section.blog .wrapper article.post:hover::after {
-  width: calc(100% + 0.8rem);
-  height: calc(100% + 0.8rem);
-  top: calc(-0.4rem - 2px);
-  left: calc(-0.4rem - 2px);
-  border-radius: 1.45rem;
+  --padding-extra: 7px;
+  --new-size: calc(100% + (var(--padding-extra) * 2));
+  width: var(--new-size);
+  height: var(--new-size);
+  border-radius: calc(var(--border-radius) + var(--padding-extra));
   opacity: 1;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3333333333);
 }
@@ -1301,7 +1311,8 @@ footer .wrapper {
   display: grid;
   row-gap: 2rem;
   grid-template-columns: 1fr auto;
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 footer .brand {
   display: flex;
@@ -1330,6 +1341,7 @@ footer .links a:hover {
 footer .copyright {
   font-size: 0.9rem;
   color: #999999;
+  opacity: 0;
 }
 footer .by {
   justify-self: end;

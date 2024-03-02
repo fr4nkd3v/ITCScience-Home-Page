@@ -54,7 +54,7 @@ html(lang="es")
       section.initial: .wrapper
 
           .header.font-style-3
-            img(src="./assets/images/hand.png", alt="")
+            img.hand(src="./assets/images/hand.png", alt="")
             | #[span Bienvenido ] a nuestra Comunidad!
 
           .wrapper-quote
@@ -70,14 +70,14 @@ html(lang="es")
             a.btn.btn-light(href="#")
               img(src="./assets/svg/people-community-28-filled.svg", alt="icono comunidad")
               span Unirme a la Comu
-            a.btn.btn-dark(href="#")
+            a.btn.btn-dark(href="#our")
               span Conocer más
               img(src="./assets/svg/arrow-down-circle.svg", alt="icono flecha abajo")
 
           .back
             img.logo(src="./assets/images/logo-design.png", alt="diseño del logo")
 
-      section.our: .wrapper
+      section#our.our: .wrapper
 
         .header
           .subtitle Nosotros
@@ -244,7 +244,7 @@ html(lang="es")
 
       span.copyright Copyright © 2022 ITCScience All rights reserved.
 
-      .by Designed and Developed by #[a(href="#")  @Fr4nkD3v]
+      .by Designed and Developed by #[a(href="https://github.com/fr4nkd3v", target="_blank")  @Fr4nkD3v]
 
     script(src="script.js")
 
