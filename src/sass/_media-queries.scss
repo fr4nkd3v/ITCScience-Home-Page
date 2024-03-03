@@ -154,6 +154,14 @@
   section.initial > .wrapper {
     gap: 2rem;
   }
+
+  footer .links {
+    flex-direction: column;
+    align-items: flex-end;
+    a {
+      padding-right: 0;
+    }
+  }
 }
 
 /* Pantallas pequeñas (móviles en landscape de menos de 768px) */
@@ -175,6 +183,10 @@
     }
   }
   section.our {
+    .wrapper {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+    }
     .header .title span {
       font-size: 3.4rem;
     }
@@ -185,28 +197,54 @@
       }
     }
   }
-  section.groups .content {
-    row-gap: 4rem;
+  section.groups {
+    .content {
+      row-gap: 4rem;
 
-    .group:nth-child(n) {
-
-      .circle, .back { width: 14rem; height: 14rem; }
-
-      .circle {
-        &::after { transform-origin: 6.8rem 6.8rem; }
-        &::before { transform-origin: -3.5rem -3.5rem; }
+      .group:nth-child(n) {
+        .circle, .back { width: 14rem; height: 14rem; }
+        .circle {
+          &::after { transform-origin: 6.8rem 6.8rem; }
+          &::before { transform-origin: -3.5rem -3.5rem; }
+        }
       }
+
+      .group:nth-child(odd) { justify-self: end; }
+      .group:nth-child(even) { justify-self: start; }
+
+      &::before { opacity: .5; }
+      &::after { background-color: $gray-4-color; }
     }
+  }
+  section.blog .wrapper article.post .content {
+    .top { font-size: .7rem; }
+    .title { font-size: 1.2rem; }
+    .descriptipon { font-size: .8rem; }
+  }
 
-    .group:nth-child(odd) { justify-self: end; }
-    .group:nth-child(even) { justify-self: start; }
+  footer .wrapper {
+    padding-top: 1rem;
+  }
 
-    &::before { opacity: .5; }
-    &::after { background-color: $gray-4-color; }
+  section.groups, section.community, section.blog {
+    .wrapper {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
   }
 
   p, span {
     font-size: .87rem;
+  }
+
+  section .wrapper > .header .subtitle {
+    font-size: 1rem;
+  }
+  section .wrapper > .header .title {
+    font-size: 2.5rem;
+  }
+  section .wrapper > .header p {
+    margin-top: 1.6rem;
   }
 }
 
@@ -239,6 +277,9 @@
       img { width: 100%; height: auto; }
       .ping { width: .5rem; height: .5rem; }
     }
+  }
+  section.blog .wrapper > .header .row a {
+    flex-basis: 100%;
   }
 }
 

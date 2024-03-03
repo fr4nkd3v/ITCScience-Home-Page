@@ -112,7 +112,8 @@ section .wrapper > .header {
 
   .subtitle {
     font-size: 1.2rem;
-    color: $gray-3-color;
+    color: $gray-4-color;
+    // font-weight: 600;
   }
 
   .title {
@@ -604,8 +605,6 @@ section.our {
       }
     }
 
-
-
     .paragraphs {
       width: 100%;
       display: flex;
@@ -615,7 +614,7 @@ section.our {
       text-align: center;
       font-weight: 300;
       color: $gray-9-color;
-      line-height: 2rem;
+      line-height: 180%;
       letter-spacing: 1px;
       word-spacing: 2px;
 
@@ -869,7 +868,9 @@ section.community {
   }
 
   .stats {
-    display: flex; gap: 4rem;
+    display: flex;
+    gap: 1.8rem 4rem;
+    flex-wrap: wrap;
 
     .stat {
       display: flex; gap: .3rem;
@@ -956,9 +957,10 @@ section.blog {
 
       .row {
         width: 100%;
-        display: flex; gap: 2rem;
+        display: flex; gap: 1rem 2rem;
         justify-content: center;
         margin-top: 3rem;
+        flex-wrap: wrap;
         a { flex: 0 0 16rem;}
       }
     }
@@ -1069,9 +1071,9 @@ footer {
   }
 
   .links {
-    display: flex; gap: .5rem;
+    display: flex; gap: 0 .5rem;
     align-items: center;
-    font-weight: 700;
+    font-weight: 600;
     a {
       padding: 1rem 2rem;
       color: $gray-8-color
@@ -1089,6 +1091,7 @@ footer {
     justify-self: end;
     font-size: .7rem;
     color: $gray-4-color;
+    text-align: right;
     a { color: $gray-6-color }
     a:hover { color: $gray-9-color }
   }
