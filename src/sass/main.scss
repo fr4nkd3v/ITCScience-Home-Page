@@ -20,6 +20,13 @@ body {
   font-style: normal;
   overflow-x: hidden;
 }
+body.no-scroll {
+  overflow: hidden;
+}
+
+p, span {
+  font-size: 1rem;
+}
 
 span::selection,
 div::selection,
@@ -113,12 +120,16 @@ section .wrapper > .header {
     font-weight: 800;
     font-feature-settings: 'ss03';
     color: $secondary-color;
+    text-align: center;
+    span {
+      font-size: inherit;
+    }
   }
 
   p {
     color: $gray-9-color;
     margin-top: 2.6rem;
-    line-height: 2.2rem;
+    line-height: 180%;
     letter-spacing: .5px;
     word-spacing: 1px;
   }
@@ -126,14 +137,23 @@ section .wrapper > .header {
 
 
 header {
-  position: relative; z-index: 30;
+  position: relative;
+  z-index: 30;
   height: 6rem;
   display: flex;
   justify-content: center;
   font-weight: 700;
   font-size: .9rem;
-  background-color: rgba(20, 20, 20, 40%);
-  backdrop-filter: blur(7px);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(20, 20, 20, 40%);
+    backdrop-filter: blur(7px);
+  }
 
   .wrapper {
     display: flex;
@@ -216,7 +236,7 @@ header {
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
-    width: 3.5rem; height: 2.3rem;
+    width: 3.0rem; height: 2.0rem;
     cursor: pointer;
 
     .line {
@@ -224,6 +244,7 @@ header {
 
       height: .3rem;
       background-color: $gray-9-color;
+      border-radius: 0.15rem;
       transition: all .2s ease-in-out;
     }
     .line:nth-child(1) {
@@ -266,75 +287,62 @@ header {
     flex-direction: column;
     justify-content: space-between;
     width: 100%; height: calc(100vh - 6rem);
-    padding-bottom: 1rem;
     position: absolute;
     top: 6rem; left: 100%;
 
     background-color: #222222cc;
-    backdrop-filter: blur(3px);
-
+    backdrop-filter: blur(7px);
     transition: left .5s ease-in-out;
 
-
-    li > a {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-
-      font-size: 1.3rem;
-      font-weight: 400;
-      letter-spacing: 4px;
-      color: $gray-7-color;
-      padding: 3rem 0;
-      border-bottom: 1rem solid $primary-color;
-      font-feature-settings: 'ss01';
-      transition: color .3s, text-shadow .3s;
-
-      &.active {
-        text-decoration: line-through;
-        color: $secondary-color;
-      }
-
-      span { position: relative; }
-
-    }
-
-    li > a:not(.active) {
-
-      span::after {
-        content: ""; display: block;
-        position: absolute;
-        top: calc(100% + .5rem);
-        width: 0rem; height: 2px;
-        background-color: $gray-7-color;
-        left: 50%;
-        transition: width .3s, left .3s;
-      }
-
+    li {
+      transition: background-color .2s;
       &:hover {
+        background-color: rgba(0 ,0 ,0, .4);
+      }
+      & > a {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
-        color: $gray-9-color;
-        text-shadow: 0 0 10px #ffffff88;
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: $gray-7-color;
+        padding: 1rem 0;
+        border-bottom: 1rem solid $primary-color;
+        transition: color .3s, text-shadow .3s;
 
-        span::after {
-          width: 100%; left: 0px;
-          background-color: $gray-9-color;
+        &.active {
+          text-decoration: line-through;
+          color: $secondary-color;
+        }
+
+        &:not(.active) {
+          &:hover {
+            color: $gray-9-color;
+            text-shadow: 0 0 10px #ffffff88;
+          }
+        }
+
+        span {
+          position: relative;
+          transition: width .3s, left .3s;
         }
       }
     }
 
+
     .lat-session-options {
-      display: flex; gap: 2rem;
+      display: flex; gap: 1rem;
       flex-direction: column;
       padding: 2rem;
 
       a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         height: auto;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         border-radius: 3rem;
-        font-feature-settings: 'ss01';
       }
     }
   }
@@ -353,6 +361,8 @@ section.initial {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .header {
@@ -362,15 +372,18 @@ section.initial {
     color: $secondary-color;
     text-align: right;
     span {
+      font-size: inherit;
+    }
+    .highlight {
       font-size: 4rem;
       font-weight: 800;
+      .hand {
+        width: 4rem;
+        transform: rotate(0deg);
+        transform-origin: 90% 90%;
+      }
     }
-    .hand {
-      width: 4rem;
-      margin-right: .8rem;
-      transform: rotate(0deg);
-      transform-origin: 90% 90%;
-    }
+
     .hand.first-animate {
       animation: hi 1.2s ease-in-out 1s;
     }
@@ -441,20 +454,21 @@ section.initial {
     background-color: #18181888;
     backdrop-filter: blur(8px);
 
-    font-size: 1.4rem;
     padding: 2rem 3rem;
     color: $gray-6-color;
     border: 1px solid $gray-4-color;
     border-radius: .5rem;
-    text-align: end;
+    text-align: right;
 
     p {
       letter-spacing: .2px;
       word-spacing: 2px;
+      font-size: 1.4rem;
     }
     span {
       font-weight: 700;
       color: $gray-9-color;
+      font-size: inherit;
     }
 
     .autor {
@@ -471,7 +485,7 @@ section.initial {
     position: relative;
     z-index: 5;
 
-    margin-top: 4rem;
+    margin-top: 2rem;
 
     .btn {
       min-width: 14.7rem;
@@ -743,7 +757,11 @@ section.groups {
         color: $primary-color;
         z-index: 20;
       }
-      h1, p, & > a { opacity: .8; }
+      h1, p, & > a {
+        opacity: .8;
+        position: relative;
+        z-index: 30;
+      }
       & > img {
         align-self: center;
         width: 14rem;
@@ -917,12 +935,11 @@ section.blog {
       width: 100%;
       margin-top: 4rem;
       display: grid; gap: 3rem;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
       grid-auto-rows: 1fr;
-
     }
 
-    .header {
+    & > .header {
 
       .title span {
         background: linear-gradient(90deg, #227FEB 0%, #31DBD8 100%);
@@ -952,7 +969,7 @@ section.blog {
       width: 100%;
       border-radius: var(--border-radius);
       border: 1px solid $gray-4-color;
-      // overflow: hidden;
+      cursor: pointer;
 
       transition: box-shadow .2s;
 
