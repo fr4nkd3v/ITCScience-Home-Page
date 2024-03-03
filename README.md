@@ -1,6 +1,6 @@
 # Home Page Web Static | ITCScience
 
-![ITCScience Logo](./public/assets/svg/brand-logo.svg)
+![ITCScience cover](./cover.webp)
 
 Home web for the **ITCScience organization**, dedicated to the dissemination of topics related to information technology and computer science.
 
